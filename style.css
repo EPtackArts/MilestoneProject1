@@ -8,24 +8,33 @@ free font from https://www.1001freefonts.com/vcr-osd-mono.font*/
     font-style: normal;
 }
 body {
-    background-color:blanchedalmond;
+    background-color:rgb(242,245,226);
     text-align: center;
     font-family: 'vcr_osd_monoregular', Verdana, Geneva, Tahoma, sans-serif;
 }
 main {
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
+    font-size: 3em;
+    text-shadow: -0 -3px 2px rgb(234,160,149), 0 3px 2px rgb(114,123,130);
+    color: rgb(242,245,226);
+    /*the following code is from https://css-tricks.com/adding-stroke-to-web-text/*/
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(37,30,46);
 }
 div, span {
-    border: 1px solid black;
+    padding: 1em;
 }
 header {
     position: fixed;
     top: 0px;
+    font-size: 1.2em;
+    padding: 1em;
 }
 footer {
     position: fixed;
     bottom: 0px;
+    font-size: 1.5em;
 }
