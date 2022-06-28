@@ -1,11 +1,17 @@
+@font-face {
+    font-family: vcr;
+    src: url(VCR_OSD_MONO.ttf);
+}
 body {
     background-color:blanchedalmond;
     text-align: center;
+    font-family: VCR OSD Mono, Verdana, Geneva, Tahoma, sans-serif;
 }
 main {
     position: absolute;
     left: 50%;
     top: 40%;
+    transform: translate(-50%, -50%);
 }
 div, span {
     border: 1px solid black;
