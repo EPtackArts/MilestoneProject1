@@ -1,0 +1,20 @@
+body {
+    background-color:blanchedalmond;
+    text-align: center;
+}
+main {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+div, span {
+    border: 1px solid black;
+}
+header {
+    position: fixed;
+    top: 0px;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+}
