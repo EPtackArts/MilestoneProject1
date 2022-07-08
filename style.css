@@ -17,15 +17,36 @@ main {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3em;
     text-shadow: -0 -3px 2px rgb(234,160,149), 0 3px 2px rgb(114,123,130);
     color: rgb(242,245,226);
     /*the following code is from https://css-tricks.com/adding-stroke-to-web-text/*/
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: rgb(37,30,46);
 }
-div, span {
+#prompt, span {
     padding: 1em;
+}
+#prompt{
+    font-size: 3em;
+}
+button {
+    font-family: 'vcr_osd_monoregular', Verdana, Geneva, Tahoma, sans-serif;
+    padding: .25em;
+    font-size: 2em;
+    text-shadow: -0 -3px 2px rgb(234,160,149), 0 3px 2px rgb(114,123,130);
+    color: rgb(242,245,226);
+    /*the following code is from https://css-tricks.com/adding-stroke-to-web-text/*/
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(37,30,46);
+    background-color: transparent;
+    border-style: none;
+}
+button:hover {
+    text-shadow: -0 -3px 2px rgb(114,123,130), 0 3px 2px rgb(234,160,149);
+    color: rgb(37,30,46);
+    /*the following code is from https://css-tricks.com/adding-stroke-to-web-text/*/
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(242,245,226);
 }
 header {
     position: fixed;

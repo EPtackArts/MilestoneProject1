@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Room</title>
     <link rel="stylesheet" href="style.css">
+    <script src="grained.js"></script>
 </head>
-<body>
+<body onload = 'newPrompt(1)'>
     <header>
         <span id="about">ABOUT</div>
         <span id="music">MUSIC</div>  
     </header>
     <main>
-        <div id="prompt">You suddenly find yourself in a white room.</div>
-        <div id="options">Options</div>
-        <div id="input">INPUT</div>
+        <div id="prompt">Prompt</div>
+        <div id="optionButtons">
+            <button class="options" id="o1">Option 1</button>
+            <button class="options" id="o2">Option 2</button>
+            <button class="options" id="o3">Option 3</button>
+            <button class="options" id="o4">Option 4</button>
+        </div>
     </main>
     <footer>
         <div id="inventory">INVENTORY</div>
     </footer>
+    <script src="functionality.js"></script>
 </body>
 </html>

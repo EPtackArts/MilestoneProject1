@@ -2,8 +2,7 @@
 #### Browser Game by Elizabeth Ptack
 ## How-to Play
 ### Controls
-All you need is your keyboard! We're typing in answers like it's the 80's! 
-Follow the prompts on the screen and answer accordingly.
+All you need is your mouse! Select your own path by clicking the option that feels best to you.
 Items you've picked up will appear in your onscreen inventory and disapper after use.
 ### Objective
 Get in touch with your inner existential dread as you navigate a strange place.
