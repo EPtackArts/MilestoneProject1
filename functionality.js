@@ -123,13 +123,9 @@ const promptNumbers = [{
     }
     ]
 
-
-
 let inventory = {}
 
 function startGame() {
-    //https://www.youtube.com/watch?v=R1S_NhKkvGA - I heavily relied on this video
-    //for the concept of filling my inventory
     inventory = {}
     newPrompt(1)
 }
@@ -143,9 +139,6 @@ const newPrompt = () => {
     Array.from(optionArray).forEach(option => {
         option.style.visibility = "hidden"
     });
-    // Array.from(inventoryPhotos).forEach(inventoryItems => {
-    //     inventoryPhotos.style.visibility = "hidden"
-    // });
     const currentPrompt = promptNumbers.find(p => p.id === promptId) 
     promptBox.textContent = currentPrompt.prompt
     currentPrompt.options.forEach((option, i)=> {
@@ -167,16 +160,38 @@ const newPrompt = () => {
 
     })
 }
-// newInventory(
-//     inventory.url,
-//     inventory.left,
-//     inventory.bottom
-// )
 
-//im following what we did in web game part 2 here
 function checkInventory(option){
     return option.requiredInventory == null || option.requiredInventory(inventory)
 }
+
+// https://codepen.io/abikuk/pen/pGzJGy
+var track = document.getElementById('track');
+
+var controlBtn = document.getElementById('play-pause');
+
+function playPause() {
+    if (track.paused) {
+        track.play();
+        controlBtn.className = "pause";
+    } else { 
+        track.pause();
+        controlBtn.className = "play";
+    }
+}
+
+controlBtn.addEventListener("click", playPause);
+track.addEventListener("ended", function() {
+  controlBtn.className = "play";
+});
+
+startGame()
+
+
+
+
+
+
 
 // function newInventory(){
 //     let object = document.createElement('img')
@@ -195,27 +210,3 @@ function checkInventory(option){
 //         console.log(item)
 //     })
 // }
-
-// https://codepen.io/abikuk/pen/pGzJGy
-var track = document.getElementById('track');
-
-var controlBtn = document.getElementById('play-pause');
-
-function playPause() {
-    if (track.paused) {
-        track.play();
-        //controlBtn.textContent = "Pause";
-        controlBtn.className = "pause";
-    } else { 
-        track.pause();
-         //controlBtn.textContent = "Play";
-        controlBtn.className = "play";
-    }
-}
-
-controlBtn.addEventListener("click", playPause);
-track.addEventListener("ended", function() {
-  controlBtn.className = "play";
-});
-
-startGame()
