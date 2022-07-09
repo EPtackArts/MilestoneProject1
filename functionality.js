@@ -120,6 +120,24 @@ const promptNumbers = [{
         prompt: "going up",
         nextPrompt: 7
         }]  
+    },
+    {
+    id: 13,
+    prompt: "the hallway goes on forever.",
+    options: [{
+        prompt: "and ever...",
+        nextPrompt: 16
+        }]
+    },
+    {
+    id: 16,
+    prompt: 'and ever...',
+    options: [{
+        prompt: "and ever...",
+        nextPrompt: 1
+    }
+
+    ]
     }
     ]
 
@@ -135,9 +153,12 @@ let promptId = 1
 const newPrompt = () => {
     const promptBox = document.getElementById('prompt');
     const optionArray = document.getElementsByClassName('options');
-    const inventoryPhotos = document.getElementsByClassName('test')
+    const inventoryPhotos = document.getElementsByClassName('inventoryItem')
     Array.from(optionArray).forEach(option => {
         option.style.visibility = "hidden"
+    });
+    Array.from(inventoryPhotos).forEach(item => {
+        item.style.visibility = "hidden"
     });
     const currentPrompt = promptNumbers.find(p => p.id === promptId) 
     promptBox.textContent = currentPrompt.prompt
@@ -152,17 +173,19 @@ const newPrompt = () => {
         }
         if (option.requiredInventory == null || option.requiredInventory(inventory)) {
             optionArray[i].style.visibility  = "visible"
-            
-
         } else {
             optionArray[i].style.visibility  = "hidden"
         }
-
     })
 }
 
 function checkInventory(option){
     return option.requiredInventory == null || option.requiredInventory(inventory)
+}
+function showInventory(option){
+    if (option.requiredInventory == true) {
+        item.style.visibility="visible"
+    }
 }
 
 // https://codepen.io/abikuk/pen/pGzJGy
@@ -186,27 +209,3 @@ track.addEventListener("ended", function() {
 });
 
 startGame()
-
-
-
-
-
-
-
-// function newInventory(){
-//     let object = document.createElement('img')
-//     object.src = url
-//     object.style.position = 'fixed'
-//     object.style.left = left + 'px'
-//     object.style.bottom = bottom + 'px'
-//     document.footer.append(object)
-//     return object;
-// }
-
-
-// function addToInventory(url, left, bottom, checkInventory(option)) {
-//     let item = newInventory(url, left, bottom)
-//     optionArray[i].addEventListener("click", () => {
-//         console.log(item)
-//     })
-// }

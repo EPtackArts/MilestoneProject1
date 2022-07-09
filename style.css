@@ -64,7 +64,14 @@ a {
 footer {
     position: fixed;
     bottom: 10px;
-    font-size: 1.5em;
+    font-size: 1.3em;
+}
+.footerItem{
+    display: flex;
+    flex-direction: row;
+}
+.inventoryItem {
+    max-height: 80px;
 }
 /* https://codepen.io/abikuk/pen/pGzJGy */
 #player-container #play-pause {
@@ -95,10 +102,10 @@ footer {
     content: "";
     height: 300%;
     left: -50%;
-    opacity: .7;
+    opacity: .8;
     position: fixed;
     top: -100%;
-    width: 300%;
+    width: 175%;
     z-index: -1;
   }
   
