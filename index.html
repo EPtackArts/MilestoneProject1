@@ -6,25 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Room</title>
     <link rel="stylesheet" href="style.css">
-    <script src="grained.js"></script>
 </head>
-<body onload = 'newPrompt(1)'>
-    <header>
-        <span id="about">ABOUT</div>
-        <span id="music">MUSIC</div>  
+<body id="body" onload = 'newPrompt(1)'>
+    <div class="page-header">
+        <header>
+        <a href="https://github.com/EPtackArts/MilestoneProject1/blob/0df04068a7639ee18cfa52354b17956d30330761/README.md" target="_blank"><p>ABOUT</p></a>
+        <!-- https://codepen.io/abikuk/pen/pGzJGy -->
+        <audio autoplay id="track">
+            <source src="assets/a_playlist_for_traveling_in_empty_p_(getmp3.pro).mp3" type="audio/mpeg" />
+          </audio>
+          
+          <div id="player-container">
+            <div id="play-pause" class="play">Play</div>
+          </div>
     </header>
     <main>
         <div id="prompt">Prompt</div>
         <div id="optionButtons">
-            <button class="options" id="o1">Option 1</button>
-            <button class="options" id="o2">Option 2</button>
-            <button class="options" id="o3">Option 3</button>
-            <button class="options" id="o4">Option 4</button>
+            <button class="options" id="o1">Option 1</button> <br>
+            <button class="options" id="o2">Option 2</button> <br>
+            <button class="options" id="o3">Option 3</button> <br>
+            <button class="options" id="o4">Option 4</button> <br>
+            <button class="options" id="o5">Option 5</button> <br>
         </div>
     </main>
     <footer>
         <div id="inventory">INVENTORY</div>
+<!--         <img class="test" id= "iceCream" src="https://parade.com/1241720/kelli_acciardo/best-ice-cream-shops-near-me/">-->   
     </footer>
+    </div>
     <script src="functionality.js"></script>
 </body>
 </html>
