@@ -1,5 +1,15 @@
 # White Room
 #### Browser Game by Elizabeth Ptack
+## Functionality notes
+* still working on displaying inventory items
+* the story isn't completely uploaded so some choices leave you stuck at the moment.
+* at this point here is the only finished path:
+    * Look under the bed 
+    * Pick up Spring
+    * Open door
+    * Pick lock
+    * Go left
+    * Go left    
 ## How-to Play
 ### Controls
 All you need is your mouse! Select your own path by clicking the option that feels best to you.
