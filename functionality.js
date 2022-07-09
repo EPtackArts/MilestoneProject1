@@ -34,34 +34,21 @@ const promptNumbers = [{
 //     newPrompt(1)
 // }
 // let inventory = {}
-
-const newPrompt = (promptId) => {
+let promptId = 1
+const newPrompt = () => {
     const promptBox = document.getElementById('prompt');
     const optionArray = document.getElementsByClassName('options');
-    const optionButtons = document.getElementById('optionButtons')
-    // while (optionButtons.firstChild){
-    //     optionButtons.removeChild(optionButtons.firstChild)
-    // }
+    Array.from(optionArray).forEach(option => {
+        option.style.visibility = "hidden"
+    })
     const currentPrompt = promptNumbers.find(p => p.id === promptId) 
     promptBox.textContent = currentPrompt.prompt
     currentPrompt.options.forEach((option, i)=> {
         optionArray[i].textContent = option.prompt
-        //options.addEventListener("click", () => choose(option))
-        //optionButtons.appendChild(option)
+        optionArray[i].addEventListener("click", () => {
+            promptId = option.nextPrompt
+            newPrompt()
+        } )
+        optionArray[i].style.visibility  = "visible"
     })
-    }
-function choose () {
-
 }
-// function showOption(option) {
-//     return true
-// }
-
-// startGame()
-//function nextPage(promptNumberIndex){
-   // const promptNumber = promptNumbers.find(nextPrompt => nextPrompt.id === promptNumberIndex)
-    //prompt.innerText = promptNumber.prompt
-//}   
-
-//if selected option is blank
-//then go to page blank
